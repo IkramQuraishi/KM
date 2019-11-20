@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsReporting" targetNamespace="http://tempuri.org/dsReporting.xsd" xmlns:mstns="http://tempuri.org/dsReporting.xsd" xmlns="http://tempuri.org/dsReporting.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="Conn" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Conn (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.Conn.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vwCaseTableAdapter" GeneratorDataComponentClassName="vwCaseTableAdapter" Name="vwCase" UserDataComponentName="vwCaseTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Conn (Web.config)" DbObjectName="VAW.dbo.zProvince" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select p.Provicne_Local,count(distinct c.ID) as Cases from [case] c inner join zProvince p on p.ID=c.CaseHapProvinceID
+group by p.Provicne_Local</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Cases" DataSetColumn="Cases" />
+              <Mapping SourceColumn="Provicne_Local" DataSetColumn="Provicne_Local" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsReporting" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsReporting" msprop:Generator_UserDSName="dsReporting">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vwCase" msprop:Generator_TableClassName="vwCaseDataTable" msprop:Generator_TableVarName="tablevwCase" msprop:Generator_TablePropName="vwCase" msprop:Generator_RowDeletingName="vwCaseRowDeleting" msprop:Generator_RowChangingName="vwCaseRowChanging" msprop:Generator_RowEvHandlerName="vwCaseRowChangeEventHandler" msprop:Generator_RowDeletedName="vwCaseRowDeleted" msprop:Generator_UserTableName="vwCase" msprop:Generator_RowChangedName="vwCaseRowChanged" msprop:Generator_RowEvArgName="vwCaseRowChangeEvent" msprop:Generator_RowClassName="vwCaseRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cases" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCases" msprop:Generator_ColumnPropNameInRow="Cases" msprop:Generator_ColumnPropNameInTable="CasesColumn" msprop:Generator_UserColumnName="Cases" type="xs:int" minOccurs="0" />
+              <xs:element name="Provicne_Local" msprop:Generator_ColumnVarNameInTable="columnProvicne_Local" msprop:Generator_ColumnPropNameInRow="Provicne_Local" msprop:Generator_ColumnPropNameInTable="Provicne_LocalColumn" msprop:Generator_UserColumnName="Provicne_Local" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

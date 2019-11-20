@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "KM_Application", "D:\Quraishi Data\Drive D\Projects\DI\KM Application Update\km_29Oct2017\KM_Application\", "{324AB079-E6F8-404A-97AE-3C39ADC17BEF}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_52184"
+		Debug.AspNetCompiler.PhysicalPath = "..\KM_Application\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52184\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_52184"
+		Release.AspNetCompiler.PhysicalPath = "..\KM_Application\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52184\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "52184"
+		SlnRelativePath = "..\KM_Application\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{324AB079-E6F8-404A-97AE-3C39ADC17BEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{324AB079-E6F8-404A-97AE-3C39ADC17BEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {24448E22-D4F0-40A2-946D-B0A04C5D68D2}
+	EndGlobalSection
+EndGlobal
